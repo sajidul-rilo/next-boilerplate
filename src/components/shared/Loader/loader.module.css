@@ -1,0 +1,63 @@
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  width: 300px;
+  height: 150px;
+}
+
+.loaderText {
+  font-family: "Arial", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  fill: none;
+  stroke-width: 2px;
+}
+
+.r {
+  stroke: #0e9f6e;
+  animation: strokeAnimation 2s infinite alternate;
+}
+
+.i {
+  stroke: #0e9f6e;
+  animation: strokeAnimation 2s infinite alternate 0.5s;
+}
+
+.l {
+  stroke: #0e9f6e;
+  animation: strokeAnimation 2s infinite alternate 1s;
+}
+
+.o {
+  stroke: #0e9f6e;
+  animation: strokeAnimation 2s infinite alternate 1.5s;
+}
+
+@keyframes strokeAnimation {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+  100% {
+    stroke-dasharray: 100 0;
+  }
+}
+
+.loaderPath {
+  fill: none;
+  stroke: #0e9f6e;
+  stroke-width: 1;
+  stroke-dasharray: 300;
+  stroke-dashoffset: 600;
+  animation: pathAnimation 2s infinite linear;
+}
+
+@keyframes pathAnimation {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
